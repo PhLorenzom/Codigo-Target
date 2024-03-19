@@ -1,0 +1,17 @@
+5) - 
+
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        Scanner scanner = new Scanner(System.in);
+        String texto = scanner.nextLine(); // Digite o texto a ser invertido.
+        String invertido = " ";
+
+        for(int i = texto.length()-1; i>=0; i--){
+            invertido = invertido + texto.charAt(i);
+        }
+        System.out.println(invertido);
+    }
+   
+}
