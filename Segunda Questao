@@ -1,0 +1,33 @@
+2) -  Segunda Questão:
+
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt(); //Insira o valor para a quantidade de termos da sequência fibonacci.
+        boolean pertence = false;
+        int[] termosFibonacci = new int[n + 2];
+        termosFibonacci[0] = 0;
+        termosFibonacci[1] = 1;
+        for(int i = 0; i < n; i++){
+            if(i>=2){
+            termosFibonacci[i] = termosFibonacci[i-1] + termosFibonacci[i-2];
+            }
+            System.out.println("Os termos da sequencia sao: " + termosFibonacci[i]);
+        }   
+        int valorEscolhido = scanner.nextInt(); //Insira o valor para verificar se pertence à sequência fibonacci.
+        for(int i = 0; i < termosFibonacci.length; i++){
+            if(termosFibonacci[i] == valorEscolhido){
+                pertence = true;
+                break;
+            }
+        }
+        if(pertence == true){
+            System.out.println("Pertence a sequencia");
+        }else{
+            System.out.println("Nao pertence");
+        }
+    }
+   
+}
